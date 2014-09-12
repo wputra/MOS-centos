@@ -1,0 +1,6 @@
+
+[nailgun]
+name=Nailgun
+baseurl=http://10.16.0.2:8080/centos/fuelweb/x86_64/
+gpgcheck=0
+
