@@ -1,0 +1,76 @@
+- assigned_networks: []
+  current_speed: 10000
+  id: 36
+  mac: b8:ca:3a:5c:e6:78
+  max_speed: 10000
+  name: eth0
+  state: up
+  type: ether
+- assigned_networks: []
+  current_speed: 10000
+  id: 35
+  mac: b8:ca:3a:5c:e6:7a
+  max_speed: 10000
+  name: eth1
+  state: up
+  type: ether
+- assigned_networks: []
+  current_speed: 10000
+  id: 34
+  mac: a0:36:9f:11:f7:1c
+  max_speed: 10000
+  name: eth2
+  state: up
+  type: ether
+- assigned_networks: []
+  current_speed: 10000
+  id: 33
+  mac: a0:36:9f:11:f7:1e
+  max_speed: 10000
+  name: eth3
+  state: up
+  type: ether
+- assigned_networks:
+  - id: 1
+    name: fuelweb_admin
+  current_speed: 1000
+  id: 32
+  mac: b8:ca:3a:5c:e6:7c
+  max_speed: 1000
+  name: eth4
+  state: up
+  type: ether
+- assigned_networks: []
+  current_speed: null
+  id: 31
+  mac: b8:ca:3a:5c:e6:7d
+  max_speed: 1000
+  name: eth5
+  state: down
+  type: ether
+- assigned_networks:
+  - id: 2
+    name: public
+  - id: 3
+    name: management
+  - id: 4
+    name: storage
+  mac: null
+  mode: lacp-balance-tcp
+  name: ovs-bond0
+  slaves:
+  - name: eth2
+  - name: eth0
+  state: null
+  type: bond
+- assigned_networks:
+  - id: 5
+    name: private
+  mac: null
+  mode: lacp-balance-tcp
+  name: ovs-bond1
+  slaves:
+  - name: eth3
+  - name: eth1
+  state: null
+  type: bond

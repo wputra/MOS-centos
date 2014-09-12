@@ -1,0 +1,11 @@
+- extra:
+  - disk/by-id/wwn-0x6b8ca3a0e924710019454737153eee96
+  - disk/by-id/scsi-36b8ca3a0e924710019454737153eee96
+  id: disk/by-path/pci-0000:02:00.0-scsi-0:2:0:0
+  name: sda
+  size: 952716
+  volumes:
+  - name: os
+    size: 283968
+  - name: mongo
+    size: 668748

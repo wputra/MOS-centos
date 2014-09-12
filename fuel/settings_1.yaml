@@ -1,0 +1,321 @@
+editable:
+  access:
+    email:
+      description: Email address for Administrator
+      label: email
+      type: text
+      value: admin@example.org
+      weight: 40
+    metadata:
+      label: Access
+      weight: 10
+    password:
+      description: Password for Administrator
+      label: password
+      type: password
+      value: Admin-123
+      weight: 20
+    tenant:
+      description: Tenant (project) name for Administrator
+      label: tenant
+      regex:
+        error: Invalid tenant name
+        source: ^(?!services$)(?!nova$)(?!glance$)(?!keystone$)(?!neutron$)(?!cinder$)(?!swift$)(?!ceph$)(?![Gg]uest$).*
+      type: text
+      value: admin
+      weight: 30
+    user:
+      description: Username for Administrator
+      label: username
+      regex:
+        error: Invalid username
+        source: ^(?!services$)(?!nova$)(?!glance$)(?!keystone$)(?!neutron$)(?!cinder$)(?!swift$)(?!ceph$)(?![Gg]uest$).*
+      type: text
+      value: admin
+      weight: 10
+  additional_components:
+    ceilometer:
+      description: If selected, Ceilometer component will be installed
+      label: Install Ceilometer
+      type: checkbox
+      value: true
+      weight: 40
+    heat:
+      description: ''
+      label: ''
+      type: hidden
+      value: true
+      weight: 30
+    metadata:
+      label: Additional Components
+      weight: 20
+    murano:
+      depends:
+      - cluster:net_provider: neutron
+      description: If selected, Murano component will be installed
+      label: Install Murano
+      type: checkbox
+      value: false
+      weight: 20
+    sahara:
+      description: If selected, Sahara component will be installed
+      label: Install Sahara
+      type: checkbox
+      value: false
+      weight: 10
+  common:
+    auth_key:
+      description: Public key(s) to include in authorized_keys on deployed nodes
+      label: Public Key
+      type: text
+      value: ssh-dss AAAAB3NzaC1kc3MAAAEAbRY7DKO/C5YSTtww/BdDvNNWhV9qwZ307a6ThyeprAb/zjmO262A2XNzcivdUTQF+YkVhRlIiODN17CizxkDs+wpbmOTfhAUKkzq3crDhQm8L0h+a9XYVMEdrwR7qlX5hChgTFUZhJ3BKm/82TRSDdxpBQTwee8tzWg4iK+y41v4+9m4vKEwCv+RtqICtjPY6V1MVhyhXgZ63Cub2JSvUkYtZ8TErmBEQJnsjGywbFvo0uT+VzCzdChuUpqQ3X0WznxuaLFRtQZeKLOs+XATQA943vNbFeuU6TeLYYG6w44kKLKns0MH+Whmn0snIP/P8hZQLTmgN2AgrXaI1vmwmwAAABUAya1Q+RLr1Nch+bSG1B0izkw3zDMAAAEAXsaBODSoK84Ec/6XNqLenOSylP4To4EQcODYZW+k2qpumI0ZZOi9R7Z/aHkasmFBwXyy0NX3ZuA8IxHOzBQox8yyqLMT8yYxHHz817PKk7L7WzvvT8pK68aSYCiZtSy4fgNm3IkLhf0yY6xZ1BuHD4zXiHBzE80PfN2Bz+z3H/o6Vxk9jAiuvanOH6LofbNzRyQ6DTn0VGAiBONRo2IRA1PN7accB8D6/XpWbMtGufsCJpMaPotlEvILDM7t5mI7Ncn4ITnRIpD+4T19XSvoVijQ+HolFGttlslc0awWKqpVA6CtQEWyMsW218kr72oKaZGfTVKqh0HdrPeSCMm6qwAAAQAKcF7Hr5gWh6h5QE5xq0XJ9i4hidryLLJ02tQoGDRLenyqmoPe9gvcZJTEq0LAjOZwRsT5luHcUACgJCvChZhON+MmtKTtZV5G4NK9qiSd2ujHBnMPLO7xoIJxsVG21irIzjdAx6NAhWcYb2htxPpH15FalQGbBzDkqmeDE/qULWggaK3ulwtehMeiA7IcckWHGOX+qfBXQ/IC+XViSBLxQ1+aY7GAray84XRzgYKqZyvT5WZ0wO588m0orfifRK3LI+fZ5H1jlGRiOSXZS4rtKScytvBJnDyWkdMJZdP5p02VnYwQUC8cUTCK2pTpGu1d47efsZpL3voWVmREiyE9
+        wasis.putra@cbncloud.co.id
+      weight: 70
+    auto_assign_floating_ip:
+      conflicts:
+      - cluster:net_provider: neutron
+      description: If selected, OpenStack will automatically assign a floating IP
+        to a new instance
+      label: Auto assign floating IP
+      type: checkbox
+      value: false
+      weight: 40
+    compute_scheduler_driver:
+      label: Scheduler driver
+      type: radio
+      value: nova.scheduler.filter_scheduler.FilterScheduler
+      values:
+      - data: nova.scheduler.filter_scheduler.FilterScheduler
+        description: Currently the most advanced OpenStack scheduler. See the OpenStack
+          documentation for details.
+        label: Filter scheduler
+      - data: nova.scheduler.simple.SimpleScheduler
+        description: This is 'naive' scheduler which tries to find the least loaded
+          host
+        label: Simple scheduler
+      weight: 40
+    debug:
+      description: Debug logging mode provides more information, but requires more
+        disk space.
+      label: OpenStack debug logging
+      type: checkbox
+      value: false
+      weight: 20
+    libvirt_type:
+      label: Hypervisor type
+      type: radio
+      value: kvm
+      values:
+      - data: kvm
+        description: Choose this type of hypervisor if you run OpenStack on hardware
+        label: KVM
+      - data: qemu
+        description: Choose this type of hypervisor if you run OpenStack on virtual
+          hosts.
+        label: QEMU
+      - conflicts:
+        - cluster:net_provider: neutron
+        data: vcenter
+        description: Choose this type of hypervisor if you run OpenStack in a vCenter
+          environment.
+        label: vCenter
+      weight: 30
+    metadata:
+      label: Common
+      weight: 30
+    nova_quota:
+      description: Quotas are used to limit CPU and memory usage for tenants. Enabling
+        quotas will increase load on the Nova database.
+      label: Nova quotas
+      type: checkbox
+      value: true
+      weight: 25
+    start_guests_on_host_boot:
+      description: Whether to (re-)start guests when the host reboots. If enabled,
+        this option causes guests assigned to the host to be unconditionally restarted
+        when nova-compute starts. If the guest is found to be stopped, it starts.
+        If it is found to be running, it reboots.
+      label: Start guests on host boot
+      type: checkbox
+      value: true
+      weight: 60
+    use_cow_images:
+      description: For most cases you will want qcow format. If it's disabled, raw
+        image format will be used to run VMs. OpenStack with raw format currently
+        does not support snapshotting.
+      label: Use qcow format for images
+      type: checkbox
+      value: true
+      weight: 50
+  kernel_params:
+    kernel:
+      description: Default kernel parameters
+      label: Initial parameters
+      type: text
+      value: console=ttyS0,9600 console=tty0 biosdevname=0 crashkernel=none rootdelay=90
+        nomodeset
+      weight: 45
+    metadata:
+      label: Kernel parameters
+      weight: 40
+  storage:
+    ephemeral_ceph:
+      conflicts:
+      - settings:common.libvirt_type.value: vcenter
+      description: Configures Nova to store ephemeral volumes in RBD. This works best
+        if Ceph is enabled for volumes and images, too. Enables live migration of
+        all types of Ceph backed VMs (without this option, live migration will only
+        work with VMs launched from Cinder volumes).
+      label: Ceph RBD for ephemeral volumes (Nova)
+      type: checkbox
+      value: true
+      weight: 35
+    images_ceph:
+      conflicts:
+      - settings:common.libvirt_type.value: vcenter
+      description: Configures Glance to use the Ceph RBD backend to store images.
+        If enabled, this option will prevent Swift from installing.
+      label: Ceph RBD for images (Glance)
+      type: checkbox
+      value: true
+      weight: 30
+    metadata:
+      label: Storage
+      weight: 60
+    objects_ceph:
+      conflicts:
+      - settings:common.libvirt_type.value: vcenter
+      depends:
+      - settings:storage.images_ceph.value: true
+      description: Configures RadosGW front end for Ceph RBD. This exposes S3 and
+        Swift API Interfaces. If enabled, this option will prevent Swift from installing.
+      label: Ceph RadosGW for objects (Swift API)
+      type: checkbox
+      value: true
+      weight: 40
+    osd_pool_size:
+      conflicts:
+      - settings:common.libvirt_type.value: vcenter
+      description: Configures the default number of object replicas in Ceph. This
+        number must be equal to or lower than the number of deployed 'Storage - Ceph
+        OSD' nodes.
+      label: Ceph object replication factor
+      type: text
+      value: '3'
+      weight: 70
+    volumes_ceph:
+      conflicts:
+      - settings:common.libvirt_type.value: vcenter
+      - settings:storage.volumes_lvm.value: true
+      description: Configures Cinder to store volumes in Ceph RBD images.
+      label: Ceph RBD for volumes (Cinder)
+      type: checkbox
+      value: true
+      weight: 20
+    volumes_lvm:
+      conflicts:
+      - settings:storage.volumes_ceph.value: true
+      description: Requires at least one Storage - Cinder LVM node.
+      label: Cinder LVM over iSCSI for volumes
+      type: checkbox
+      value: false
+      weight: 10
+  syslog:
+    metadata:
+      label: Syslog
+      weight: 50
+    syslog_port:
+      description: Remote syslog port
+      label: Port
+      type: text
+      value: '514'
+      weight: 20
+    syslog_server:
+      description: Remote syslog hostname
+      label: Hostname
+      type: text
+      value: ''
+      weight: 10
+    syslog_transport:
+      label: Syslog transport protocol
+      type: radio
+      value: tcp
+      values:
+      - data: udp
+        description: ''
+        label: UDP
+      - data: tcp
+        description: ''
+        label: TCP
+      weight: 30
+  vcenter:
+    cluster:
+      depends:
+      - settings:common.libvirt_type.value: vcenter
+      description: vCenter cluster name
+      label: Cluster
+      type: text
+      value: ''
+      weight: 40
+    host_ip:
+      depends:
+      - settings:common.libvirt_type.value: vcenter
+      description: IP Address of vCenter
+      label: vCenter IP
+      type: text
+      value: ''
+      weight: 10
+    metadata:
+      label: vCenter
+      weight: 20
+    use_vcenter:
+      description: ''
+      label: ''
+      type: hidden
+      value: true
+      weight: 5
+    vc_password:
+      depends:
+      - settings:common.libvirt_type.value: vcenter
+      description: vCenter admin password
+      label: Password
+      type: password
+      value: ''
+      weight: 30
+    vc_user:
+      depends:
+      - settings:common.libvirt_type.value: vcenter
+      description: vCenter admin username
+      label: Username
+      type: text
+      value: ''
+      weight: 30
+  vlan_splinters:
+    metadata:
+      enabled: false
+      label: VLAN Splinters
+      toggleable: true
+      weight: 50
+    vswitch:
+      label: Open VSwitch VLAN Splinters feature (Neutron only)
+      type: radio
+      value: disabled
+      values:
+      - data: soft
+        description: Configure OVS to use VLAN splinters workaround with soft trunk
+          detection. This may resolve issues that might be encountered when using
+          VLAN tags with OVS and Neutron on Kernels <3.3 (CentOS)
+        label: Enable OVS VLAN splinters soft trunks workaround
+      - data: hard
+        description: Configure OVS to use VLAN splinters workaround with hard trunk
+          allocation. Offers similar effect as soft trunks workaround, but forces
+          each trunk to be predefined. This may work better than soft trunks especially
+          if you still see network problems using soft trunks
+        label: Enable OVS VLAN splinters hard trunks workaround
+      - data: kernel_lt
+        description: Install the Fedora 3.10 longterm kernel instead of the default
+          2.6.32 kernel. This should remove any need for VLAN Splinters workarounds
+          as the 3.10 kernel has better support for OVS VLANs. This kernel may not
+          work with all hardware platforms, use caution.
+        label: 'EXPERIMENTAL: Use Fedora longterm kernel'
+      weight: 55
