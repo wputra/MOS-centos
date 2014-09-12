@@ -1,0 +1,18 @@
+[console_scripts]
+ceph-deploy = ceph_deploy.cli:main
+
+[ceph_deploy.cli]
+purgedata = ceph_deploy.install:make_purge_data
+mds = ceph_deploy.mds:make
+forgetkeys = ceph_deploy.forgetkeys:make
+purge = ceph_deploy.install:make_purge
+admin = ceph_deploy.admin:make
+mon = ceph_deploy.mon:make
+install = ceph_deploy.install:make
+gatherkeys = ceph_deploy.gatherkeys:make
+new = ceph_deploy.new:make
+disk = ceph_deploy.osd:make_disk
+config = ceph_deploy.config:make
+osd = ceph_deploy.osd:make
+uninstall = ceph_deploy.install:make_uninstall
+

@@ -1,29 +1,29 @@
-<device DEVNO="0x0803" TIME="1408618469.289376" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="7684b026-ace0-3a70-7007-8b84df545e3b" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sda3</device>
-<device DEVNO="0x10300" TIME="1408618469.326126" UUID="BSfjbz-kVq7-0d53-Aewz-hV94-zI02-Eqq1fF" TYPE="LVM2_member">/dev/sda16</device>
-<device DEVNO="0x0823" TIME="1408618469.358614" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="30bd6255-76e2-8ffb-7fc6-dd2670be3336" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdc3</device>
-<device DEVNO="0x0833" TIME="1408618469.384198" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="4cfa11fe-8c0d-4634-305b-cad24a4fd0fb" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdd3</device>
-<device DEVNO="0x0843" TIME="1408618469.411252" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="db1fd137-9fbe-5e18-9278-f3039e54188e" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sde3</device>
-<device DEVNO="0x0863" TIME="1408618469.437671" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="9bce4d27-1fbd-9dad-4d5c-06e507e37f98" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdg3</device>
-<device DEVNO="0x0883" TIME="1408618469.460614" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="188f46a1-14e1-2f29-1d74-f96ddde58b4a" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdi3</device>
-<device DEVNO="0x0873" TIME="1408618469.483118" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="b199887b-df67-3e65-e098-056f0343ad45" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdh3</device>
-<device DEVNO="0x0893" TIME="1408618469.512044" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="044e24d8-90d2-0822-268e-bd9693d2b1ef" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdj3</device>
-<device DEVNO="0x08a3" TIME="1408618469.540846" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="643c4146-ba97-945f-e4d5-1219ef87782a" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdk3</device>
-<device DEVNO="0x0853" TIME="1408618469.566504" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="6f21aab1-aeed-c618-1555-ccb79f95a8ea" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdf3</device>
-<device DEVNO="0x08c3" TIME="1408618469.594564" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="e1c5bb4b-cd92-124e-f1e6-70cc07312eb2" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdm3</device>
-<device DEVNO="0x08b3" TIME="1408618469.617920" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="57fb0c49-bfb3-9410-e011-fd0dba8a0aca" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdl3</device>
-<device DEVNO="0x0813" TIME="1408618469.647962" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="1d6b8fa1-69dc-b0e1-48ee-53f972e5bf76" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdb3</device>
-<device DEVNO="0xfd00" TIME="1408618469.648030" PRI="45" UUID="21648492-34e7-4744-8485-8584041a6e05" TYPE="ext4">/dev/mapper/os-root</device>
-<device DEVNO="0xfd01" TIME="1408618469.648123" PRI="45" UUID="d4e47631-91fe-425a-9706-5072c3368be1" TYPE="swap">/dev/mapper/os-swap</device>
-<device DEVNO="0x0900" TIME="1408618469.648281" PRI="10" UUID="527a6bcb-da85-4805-811c-130ab026bad0" TYPE="ext2">/dev/md0</device>
-<device DEVNO="0x0824" TIME="1408618469.358645" UUID="2a7ea032-0d54-4452-b514-ca69ee37d1c9" TYPE="xfs">/dev/sdc4</device>
-<device DEVNO="0x0834" TIME="1408618469.384228" UUID="69df3251-c270-4c86-8d35-e90c234745cf" TYPE="xfs">/dev/sdd4</device>
-<device DEVNO="0x0844" TIME="1408618469.411283" UUID="8268ead3-bd91-46de-bd62-6a9ec7f0f849" TYPE="xfs">/dev/sde4</device>
-<device DEVNO="0x0864" TIME="1408618469.437702" UUID="0f1386e6-02ac-490b-818d-7dbf3a01eb1a" TYPE="xfs">/dev/sdg4</device>
-<device DEVNO="0x0884" TIME="1408618469.460646" UUID="e4eb874d-5948-482a-a833-00b709efaf29" TYPE="xfs">/dev/sdi4</device>
-<device DEVNO="0x0874" TIME="1408618469.483149" UUID="6f3d642d-f4b6-4cd6-85ad-9709ef285174" TYPE="xfs">/dev/sdh4</device>
-<device DEVNO="0x0894" TIME="1408618469.512074" UUID="ea2007a0-25c4-4db6-aee7-73aadc8806e9" TYPE="xfs">/dev/sdj4</device>
-<device DEVNO="0x08a4" TIME="1408618469.540886" UUID="d3c2639d-17d4-4666-91d2-70fd3a98b829" TYPE="xfs">/dev/sdk4</device>
-<device DEVNO="0x0854" TIME="1408618469.566534" UUID="fd142ff0-d940-4465-ab57-a5b3d69437a0" TYPE="xfs">/dev/sdf4</device>
-<device DEVNO="0x08c4" TIME="1408618469.594595" UUID="76618cd1-65c9-42ab-8702-15ad644119bf" TYPE="xfs">/dev/sdm4</device>
-<device DEVNO="0x08b4" TIME="1408618469.617950" UUID="09e54e89-50c0-4ca7-8e9e-02e221c8cb88" TYPE="xfs">/dev/sdl4</device>
-<device DEVNO="0x0814" TIME="1408618469.647994" UUID="67c18c69-f706-4c50-88f9-377807b8c544" TYPE="xfs">/dev/sdb4</device>
+<device DEVNO="0x0803" TIME="1410486921.787669" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="7684b026-ace0-3a70-7007-8b84df545e3b" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sda3</device>
+<device DEVNO="0x10300" TIME="1410486921.975012" UUID="BSfjbz-kVq7-0d53-Aewz-hV94-zI02-Eqq1fF" TYPE="LVM2_member">/dev/sda16</device>
+<device DEVNO="0x0823" TIME="1410486921.112594" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="30bd6255-76e2-8ffb-7fc6-dd2670be3336" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdc3</device>
+<device DEVNO="0x0833" TIME="1410486921.172981" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="4cfa11fe-8c0d-4634-305b-cad24a4fd0fb" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdd3</device>
+<device DEVNO="0x0843" TIME="1410486921.301306" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="db1fd137-9fbe-5e18-9278-f3039e54188e" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sde3</device>
+<device DEVNO="0x0863" TIME="1410486921.362332" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="9bce4d27-1fbd-9dad-4d5c-06e507e37f98" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdg3</device>
+<device DEVNO="0x0883" TIME="1410486921.598950" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="188f46a1-14e1-2f29-1d74-f96ddde58b4a" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdi3</device>
+<device DEVNO="0x0873" TIME="1410486921.425989" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="b199887b-df67-3e65-e098-056f0343ad45" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdh3</device>
+<device DEVNO="0x0893" TIME="1410486921.663602" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="044e24d8-90d2-0822-268e-bd9693d2b1ef" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdj3</device>
+<device DEVNO="0x08a3" TIME="1410486921.474310" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="643c4146-ba97-945f-e4d5-1219ef87782a" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdk3</device>
+<device DEVNO="0x0853" TIME="1410486921.233889" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="6f21aab1-aeed-c618-1555-ccb79f95a8ea" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdf3</device>
+<device DEVNO="0x08c3" TIME="1410486921.530858" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="e1c5bb4b-cd92-124e-f1e6-70cc07312eb2" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdm3</device>
+<device DEVNO="0x08b3" TIME="1410486921.720883" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="57fb0c49-bfb3-9410-e011-fd0dba8a0aca" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdl3</device>
+<device DEVNO="0x0813" TIME="1410486921.52069" UUID="cbee2ba1-36e0-9e74-4e61-29f240736aa2" UUID_SUB="1d6b8fa1-69dc-b0e1-48ee-53f972e5bf76" LABEL="node-7.cbncloud.net:0" TYPE="linux_raid_member">/dev/sdb3</device>
+<device DEVNO="0xfd00" TIME="1410486921.975056" PRI="45" UUID="21648492-34e7-4744-8485-8584041a6e05" TYPE="ext4">/dev/mapper/os-root</device>
+<device DEVNO="0xfd01" TIME="1410486921.975180" PRI="45" UUID="d4e47631-91fe-425a-9706-5072c3368be1" TYPE="swap">/dev/mapper/os-swap</device>
+<device DEVNO="0x0900" TIME="1410486921.975368" PRI="10" UUID="527a6bcb-da85-4805-811c-130ab026bad0" TYPE="ext2">/dev/md0</device>
+<device DEVNO="0x0824" TIME="1410486921.112625" UUID="2a7ea032-0d54-4452-b514-ca69ee37d1c9" TYPE="xfs">/dev/sdc4</device>
+<device DEVNO="0x0834" TIME="1410486921.173012" UUID="69df3251-c270-4c86-8d35-e90c234745cf" TYPE="xfs">/dev/sdd4</device>
+<device DEVNO="0x0844" TIME="1410486921.301337" UUID="8268ead3-bd91-46de-bd62-6a9ec7f0f849" TYPE="xfs">/dev/sde4</device>
+<device DEVNO="0x0864" TIME="1410486921.362363" UUID="0f1386e6-02ac-490b-818d-7dbf3a01eb1a" TYPE="xfs">/dev/sdg4</device>
+<device DEVNO="0x0884" TIME="1410486921.598982" UUID="e4eb874d-5948-482a-a833-00b709efaf29" TYPE="xfs">/dev/sdi4</device>
+<device DEVNO="0x0874" TIME="1410486921.426021" UUID="6f3d642d-f4b6-4cd6-85ad-9709ef285174" TYPE="xfs">/dev/sdh4</device>
+<device DEVNO="0x0894" TIME="1410486921.663633" UUID="ea2007a0-25c4-4db6-aee7-73aadc8806e9" TYPE="xfs">/dev/sdj4</device>
+<device DEVNO="0x08a4" TIME="1410486921.474341" UUID="d3c2639d-17d4-4666-91d2-70fd3a98b829" TYPE="xfs">/dev/sdk4</device>
+<device DEVNO="0x0854" TIME="1410486921.233921" UUID="fd142ff0-d940-4465-ab57-a5b3d69437a0" TYPE="xfs">/dev/sdf4</device>
+<device DEVNO="0x08c4" TIME="1410486921.530890" UUID="76618cd1-65c9-42ab-8702-15ad644119bf" TYPE="xfs">/dev/sdm4</device>
+<device DEVNO="0x08b4" TIME="1410486921.720915" UUID="09e54e89-50c0-4ca7-8e9e-02e221c8cb88" TYPE="xfs">/dev/sdl4</device>
+<device DEVNO="0x0814" TIME="1410486921.52103" UUID="67c18c69-f706-4c50-88f9-377807b8c544" TYPE="xfs">/dev/sdb4</device>

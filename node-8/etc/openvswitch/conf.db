@@ -144,3 +144,5 @@ OVSDB JSON 312 9f0137320ad934b2d988e27555eff19f0f3e71fb
 {"_date":1408448330,"Interface":{"79f74d9b-ae46-43a2-b8ec-222fccd357ce":{"options":["map",[["peer","br-ovs-bond1--br-prv"]]]}},"_comment":"ovs-vsctl: /usr/bin/ovs-vsctl set interface br-prv--br-ovs-bond1 options:peer=br-ovs-bond1--br-prv","Open_vSwitch":{"62461c41-4d69-4131-966c-efa929322a0c":{"next_cfg":33}}}
 OVSDB JSON 158 cfe46a1fcd385085e8cc6cd26954ffc9a80a92f3
 {"_date":1408448330,"Interface":{"79f74d9b-ae46-43a2-b8ec-222fccd357ce":{"ofport":1}},"Open_vSwitch":{"62461c41-4d69-4131-966c-efa929322a0c":{"cur_cfg":33}}}
+OVSDB JSON 353 07a5a2174f85c9b04e4e3a0e97036b692629c252
+{"_date":1409127325,"Open_vSwitch":{"62461c41-4d69-4131-966c-efa929322a0c":{"system_version":"6.5-Final","system_type":"CentOS"}},"_comment":"ovs-vsctl: ovs-vsctl --no-wait set Open_vSwitch . ovs-version=1.10.2 \"external-ids:system-id=\\\"5b3668f1-d665-4582-a5c0-d9d62afc7d41\\\"\" \"system-type=\\\"CentOS\\\"\" \"system-version=\\\"6.5-Final\\\"\""}

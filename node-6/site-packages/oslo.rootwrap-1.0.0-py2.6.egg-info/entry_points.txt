@@ -1,0 +1,3 @@
+[console_scripts]
+oslo-rootwrap = oslo.rootwrap.cmd:main
+

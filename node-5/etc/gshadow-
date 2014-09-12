@@ -49,3 +49,4 @@ rpcuser:!::
 nfsnobody:!::
 nova:!::nova,ceilometer
 fuse:!::
+avahi:!::

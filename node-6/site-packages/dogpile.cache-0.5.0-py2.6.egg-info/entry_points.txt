@@ -1,0 +1,4 @@
+
+      [mako.cache]
+      dogpile = dogpile.cache.plugins.mako:MakoPlugin
+      
