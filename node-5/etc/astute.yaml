@@ -1,0 +1,436 @@
+--- 
+mysql: 
+  root_password: wirBRdKb
+compute_scheduler_driver: nova.scheduler.filter_scheduler.FilterScheduler
+role: compute
+status: provisioned
+sahara: 
+  user_password: 8TJbwymK
+  db_password: Ad0z4YaM
+  enabled: false
+nodes: 
+- public_netmask: 255.255.255.0
+  role: primary-controller
+  swift_zone: "1"
+  internal_address: 192.168.0.3
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.3
+  name: node-1
+  fqdn: node-1.cbncloud.net
+  uid: "1"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.2
+- public_netmask: 255.255.255.0
+  role: primary-mongo
+  swift_zone: "1"
+  internal_address: 192.168.0.3
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.3
+  name: node-1
+  fqdn: node-1.cbncloud.net
+  uid: "1"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.2
+- public_netmask: 255.255.255.0
+  role: controller
+  swift_zone: "2"
+  internal_address: 192.168.0.4
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.4
+  name: node-2
+  fqdn: node-2.cbncloud.net
+  uid: "2"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.3
+- public_netmask: 255.255.255.0
+  role: mongo
+  swift_zone: "2"
+  internal_address: 192.168.0.4
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.4
+  name: node-2
+  fqdn: node-2.cbncloud.net
+  uid: "2"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.3
+- public_netmask: 255.255.255.0
+  role: controller
+  swift_zone: "3"
+  internal_address: 192.168.0.5
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.5
+  name: node-3
+  fqdn: node-3.cbncloud.net
+  uid: "3"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.4
+- public_netmask: 255.255.255.0
+  role: mongo
+  swift_zone: "3"
+  internal_address: 192.168.0.5
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.5
+  name: node-3
+  fqdn: node-3.cbncloud.net
+  uid: "3"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.4
+- public_netmask: 255.255.255.0
+  role: compute
+  swift_zone: "4"
+  internal_address: 192.168.0.6
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.6
+  name: node-4
+  fqdn: node-4.cbncloud.net
+  uid: "4"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.5
+- public_netmask: 255.255.255.0
+  role: compute
+  swift_zone: "5"
+  internal_address: 192.168.0.7
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.7
+  name: node-5
+  fqdn: node-5.cbncloud.net
+  uid: "5"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.6
+- public_netmask: 255.255.255.0
+  role: compute
+  swift_zone: "6"
+  internal_address: 192.168.0.8
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.8
+  name: node-6
+  fqdn: node-6.cbncloud.net
+  uid: "6"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.7
+- public_netmask: 255.255.255.0
+  role: ceph-osd
+  swift_zone: "7"
+  internal_address: 192.168.0.9
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.9
+  name: node-7
+  fqdn: node-7.cbncloud.net
+  uid: "7"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.8
+- public_netmask: 255.255.255.0
+  role: ceph-osd
+  swift_zone: "8"
+  internal_address: 192.168.0.10
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.10
+  name: node-8
+  fqdn: node-8.cbncloud.net
+  uid: "8"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.9
+- public_netmask: 255.255.255.0
+  role: ceph-osd
+  swift_zone: "9"
+  internal_address: 192.168.0.11
+  internal_netmask: 255.255.255.0
+  public_address: 103.24.13.11
+  name: node-9
+  fqdn: node-9.cbncloud.net
+  uid: "9"
+  storage_netmask: 255.255.255.0
+  storage_address: 192.168.1.10
+priority: 400
+last_controller: node-3
+storage: 
+  pg_num: 2048
+  osd_pool_size: "3"
+  objects_ceph: true
+  volumes_lvm: false
+  ephemeral_ceph: true
+  images_ceph: true
+  metadata: 
+    label: Storage
+    weight: 60
+  volumes_ceph: true
+vlan_splinters: 
+  vswitch: disabled
+  metadata: 
+    label: VLAN Splinters
+    weight: 50
+    enabled: false
+    toggleable: true
+storage_network_range: 192.168.1.0/24
+nova_quota: true
+management_vip: 192.168.0.2
+access: 
+  user: admin
+  password: Admin-123
+  tenant: admin
+  email: admin@example.org
+  metadata: 
+    label: Access
+    weight: 10
+uid: "5"
+swift: 
+  user_password: XD5N0h4N
+rabbit: 
+  password: XrpesFcV
+start_guests_on_host_boot: true
+fqdn: node-5.cbncloud.net
+deployment_mode: ha_compact
+master_ip: 10.16.0.2
+online: true
+quantum: true
+mp: 
+- weight: "1"
+  point: "1"
+- weight: "2"
+  point: "2"
+auto_assign_floating_ip: false
+murano: 
+  rabbit_password: cTjrXxjj
+  user_password: xWmhxONp
+  db_password: haFnX3qF
+  enabled: false
+base_syslog: 
+  syslog_server: 10.16.0.2
+  syslog_port: "514"
+deployment_id: 1
+fuel_version: "5.0"
+cobbler: 
+  profile: centos-x86_64
+nova: 
+  state_path: /var/lib/nova
+  user_password: Tso2RA4Y
+  db_password: KkaSDHjo
+glance: 
+  user_password: lhC71Ypu
+  db_password: W94Scy37
+  image_cache_max_size: "0"
+management_network_range: 192.168.0.0/24
+use_cow_images: true
+debug: false
+metadata: 
+  label: Common
+  weight: 30
+network_scheme: 
+  interfaces: 
+    eth5: 
+      L2: 
+        vlan_splinters: "off"
+    eth4: 
+      L2: 
+        vlan_splinters: "off"
+    eth3: 
+      L2: 
+        vlan_splinters: "off"
+    eth2: 
+      L2: 
+        vlan_splinters: "off"
+    eth1: 
+      L2: 
+        vlan_splinters: "off"
+    eth0: 
+      L2: 
+        vlan_splinters: "off"
+  roles: 
+    private: br-prv
+    storage: br-storage
+    management: br-mgmt
+    fw-admin: br-fw-admin
+    ex: br-ex
+  transformations: 
+  - name: br-eth4
+    action: add-br
+  - name: eth4
+    action: add-port
+    bridge: br-eth4
+  - name: br-eth5
+    action: add-br
+  - name: eth5
+    action: add-port
+    bridge: br-eth5
+  - name: br-ovs-bond0
+    action: add-br
+  - interfaces: 
+    - eth2
+    - eth0
+    name: ovs-bond0
+    action: add-bond
+    properties: 
+    - lacp=active
+    - bond_mode=balance-tcp
+    bridge: br-ovs-bond0
+  - name: br-ovs-bond1
+    action: add-br
+  - interfaces: 
+    - eth3
+    - eth1
+    name: ovs-bond1
+    action: add-bond
+    properties: 
+    - lacp=active
+    - bond_mode=balance-tcp
+    bridge: br-ovs-bond1
+  - name: br-ex
+    action: add-br
+  - name: br-mgmt
+    action: add-br
+  - name: br-storage
+    action: add-br
+  - name: br-fw-admin
+    action: add-br
+  - tags: 
+    - 22
+    - 0
+    bridges: 
+    - br-ovs-bond0
+    - br-storage
+    action: add-patch
+  - tags: 
+    - 20
+    - 0
+    bridges: 
+    - br-ovs-bond0
+    - br-ex
+    action: add-patch
+  - tags: 
+    - 21
+    - 0
+    bridges: 
+    - br-ovs-bond0
+    - br-mgmt
+    action: add-patch
+  - trunks: 
+    - 0
+    bridges: 
+    - br-eth4
+    - br-fw-admin
+    action: add-patch
+  - name: br-prv
+    action: add-br
+  - bridges: 
+    - br-ovs-bond1
+    - br-prv
+    action: add-patch
+  version: "1.0"
+  provider: ovs
+  endpoints: 
+    br-mgmt: 
+      IP: 
+      - 192.168.0.7/24
+    br-storage: 
+      IP: 
+      - 192.168.1.6/24
+    br-fw-admin: 
+      IP: 
+      - 10.16.0.7/17
+    br-ex: 
+      gateway: 103.24.13.1
+      IP: 
+      - 103.24.13.7/24
+    br-prv: 
+      IP: none
+keystone: 
+  admin_token: 35mv5GUW
+  db_password: SlDRLK95
+cinder: 
+  user_password: GUdS9frq
+  db_password: 7i8ZkGUJ
+kernel_params: 
+  kernel: console=ttyS0,9600 console=tty0 biosdevname=0 crashkernel=none rootdelay=90 nomodeset
+  metadata: 
+    label: Kernel parameters
+    weight: 40
+heat: 
+  rabbit_password: ossvPu9M
+  user_password: ovxrk0Wi
+  db_password: kMVcDVAT
+  enabled: true
+quantum_settings: 
+  database: 
+    passwd: 4BR3l0xF
+  L3: 
+    use_namespaces: true
+  L2: 
+    base_mac: fa:16:3e:00:00:00
+    phys_nets: 
+      physnet2: 
+        vlan_range: 101:1000
+        bridge: br-prv
+      physnet1: 
+        vlan_range: 
+        bridge: br-ex
+    segmentation_type: vlan
+  metadata: 
+    metadata_proxy_shared_secret: oIgJXiLO
+  keystone: 
+    admin_password: XkuIjZfz
+  predefined_networks: 
+    net04_ext: 
+      tenant: admin
+      shared: false
+      L2: 
+        segment_id: 
+        router_ext: true
+        physnet: physnet1
+        network_type: flat
+      L3: 
+        gateway: 103.24.13.1
+        nameservers: []
+
+        floating: 103.24.13.32:103.24.13.254
+        enable_dhcp: false
+        subnet: 103.24.13.0/24
+    net04: 
+      tenant: admin
+      shared: false
+      L2: 
+        segment_id: 
+        router_ext: false
+        physnet: physnet2
+        network_type: vlan
+      L3: 
+        gateway: 192.168.111.1
+        nameservers: 
+        - 8.8.4.4
+        - 8.8.8.8
+        floating: 
+        enable_dhcp: true
+        subnet: 192.168.111.0/24
+auth_key: ssh-dss AAAAB3NzaC1kc3MAAAEAbRY7DKO/C5YSTtww/BdDvNNWhV9qwZ307a6ThyeprAb/zjmO262A2XNzcivdUTQF+YkVhRlIiODN17CizxkDs+wpbmOTfhAUKkzq3crDhQm8L0h+a9XYVMEdrwR7qlX5hChgTFUZhJ3BKm/82TRSDdxpBQTwee8tzWg4iK+y41v4+9m4vKEwCv+RtqICtjPY6V1MVhyhXgZ63Cub2JSvUkYtZ8TErmBEQJnsjGywbFvo0uT+VzCzdChuUpqQ3X0WznxuaLFRtQZeKLOs+XATQA943vNbFeuU6TeLYYG6w44kKLKns0MH+Whmn0snIP/P8hZQLTmgN2AgrXaI1vmwmwAAABUAya1Q+RLr1Nch+bSG1B0izkw3zDMAAAEAXsaBODSoK84Ec/6XNqLenOSylP4To4EQcODYZW+k2qpumI0ZZOi9R7Z/aHkasmFBwXyy0NX3ZuA8IxHOzBQox8yyqLMT8yYxHHz817PKk7L7WzvvT8pK68aSYCiZtSy4fgNm3IkLhf0yY6xZ1BuHD4zXiHBzE80PfN2Bz+z3H/o6Vxk9jAiuvanOH6LofbNzRyQ6DTn0VGAiBONRo2IRA1PN7accB8D6/XpWbMtGufsCJpMaPotlEvILDM7t5mI7Ncn4ITnRIpD+4T19XSvoVijQ+HolFGttlslc0awWKqpVA6CtQEWyMsW218kr72oKaZGfTVKqh0HdrPeSCMm6qwAAAQAKcF7Hr5gWh6h5QE5xq0XJ9i4hidryLLJ02tQoGDRLenyqmoPe9gvcZJTEq0LAjOZwRsT5luHcUACgJCvChZhON+MmtKTtZV5G4NK9qiSd2ujHBnMPLO7xoIJxsVG21irIzjdAx6NAhWcYb2htxPpH15FalQGbBzDkqmeDE/qULWggaK3ulwtehMeiA7IcckWHGOX+qfBXQ/IC+XViSBLxQ1+aY7GAray84XRzgYKqZyvT5WZ0wO588m0orfifRK3LI+fZ5H1jlGRiOSXZS4rtKScytvBJnDyWkdMJZdP5p02VnYwQUC8cUTCK2pTpGu1d47efsZpL3voWVmREiyE9 wasis.putra@cbncloud.co.id
+syslog: 
+  syslog_transport: tcp
+  syslog_server: ""
+  syslog_port: "514"
+  metadata: 
+    label: Syslog
+    weight: 50
+public_vip: 103.24.13.2
+openstack_version: "2014.1"
+libvirt_type: kvm
+ceilometer: 
+  user_password: MQfeyatL
+  db_password: 2qFGDLyT
+  enabled: true
+  metering_secret: KEUKXP3u
+test_vm_image: 
+  disk_format: qcow2
+  min_ram: 64
+  img_path: /opt/vm/cirros-x86_64-disk.img
+  img_name: TestVM
+  glance_properties: "--property murano_image_info='{\"title\": \"Murano Demo\", \"type\": \"cirros.demo\"}'"
+  os_name: cirros
+  public: "true"
+  container_format: bare
+vcenter: 
+  vc_user: ""
+  vc_password: ""
+  host_ip: ""
+  cluster: ""
+  use_vcenter: true
+  metadata: 
+    label: vCenter
+    weight: 20

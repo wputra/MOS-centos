@@ -1,0 +1,6 @@
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="b8:ca:3a:5c:e5:50", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0"
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="b8:ca:3a:5c:e5:52", ATTR{type}=="1", KERNEL=="eth*", NAME="eth1"
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="a0:36:9f:11:f5:bc", ATTR{type}=="1", KERNEL=="eth*", NAME="eth2"
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="a0:36:9f:11:f5:be", ATTR{type}=="1", KERNEL=="eth*", NAME="eth3"
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="b8:ca:3a:5c:e5:54", ATTR{type}=="1", KERNEL=="eth*", NAME="eth4"
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="b8:ca:3a:5c:e5:55", ATTR{type}=="1", KERNEL=="eth*", NAME="eth5"

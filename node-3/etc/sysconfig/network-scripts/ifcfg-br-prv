@@ -1,0 +1,6 @@
+DEVICE=br-prv
+BOOTPROTO=none
+ONBOOT=yes
+USERCTL=no
+
+

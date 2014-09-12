@@ -1,0 +1,6 @@
+<device DEVNO="0x0803" TIME="1408618455.309593" UUID="e756a964-4df4-487c-8499-add8cfc0d337" TYPE="ext4">/dev/sda3</device>
+<device DEVNO="0x0804" TIME="1408618455.309645" UUID="RGvgxW-WZ1C-mUpv-n1Rm-USjs-lO1W-lkPzOB" TYPE="LVM2_member">/dev/sda4</device>
+<device DEVNO="0x0805" TIME="1408618455.309693" UUID="kigovK-Iq4j-IOJe-buhG-vXFF-sxuh-qTZqcS" TYPE="LVM2_member">/dev/sda5</device>
+<device DEVNO="0xfd00" TIME="1408618455.309750" PRI="45" UUID="3d8c9041-8caf-4aa0-af28-a5a4ddbf57c3" TYPE="ext4">/dev/mapper/os-root</device>
+<device DEVNO="0xfd01" TIME="1408618455.309883" PRI="45" UUID="37f12af6-119f-42ec-a1e5-f4fc48583e8c" TYPE="swap">/dev/mapper/os-swap</device>
+<device DEVNO="0xfd02" TIME="1408618455.309953" PRI="45" UUID="f58732da-80c2-488d-8e48-e44e89411312" TYPE="xfs">/dev/mapper/vm-nova</device>

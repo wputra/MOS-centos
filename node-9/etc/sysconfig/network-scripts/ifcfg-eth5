@@ -1,0 +1,6 @@
+DEVICE=eth5
+BOOTPROTO=none
+ONBOOT=yes
+USERCTL=no
+
+

@@ -1,0 +1,1 @@
+export CEPH_ARGS='--id compute'

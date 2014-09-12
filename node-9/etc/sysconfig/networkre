@@ -1,0 +1,3 @@
+NETWORKING=yes
+HOSTNAME=node-9.cbncloud.net
+GATEWAY=10.16.0.2
