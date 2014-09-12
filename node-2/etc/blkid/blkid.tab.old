@@ -1,6 +1,0 @@
-<device DEVNO="0x0803" TIME="1410486920.377941" UUID="f00d0397-bacf-43f4-9efd-3a0dbd30dbc0" TYPE="ext4">/dev/sda3</device>
-<device DEVNO="0x0804" TIME="1410486920.377981" UUID="xllhym-odQA-wc9N-VrP9-Ifj8-Bodg-8lf2YH" TYPE="LVM2_member">/dev/sda4</device>
-<device DEVNO="0x0805" TIME="1410486920.378009" UUID="oHyJtG-Zdp6-KLrt-YBIk-oEV5-3E5L-u5WwP8" TYPE="LVM2_member">/dev/sda5</device>
-<device DEVNO="0xfd00" TIME="1410486920.378041" PRI="45" UUID="7139534d-fb93-4d8e-8efd-2eb239d5a83b" TYPE="ext4">/dev/mapper/os-root</device>
-<device DEVNO="0xfd01" TIME="1410486920.378170" PRI="45" UUID="159b0137-6e10-466e-b659-6827511663c1" TYPE="swap">/dev/mapper/os-swap</device>
-<device DEVNO="0xfd02" TIME="1410486920.378265" PRI="45" UUID="559ddd99-edc6-4fa6-a6d0-b9200b8213c1" TYPE="ext4">/dev/mapper/mongo-mongodb</device>

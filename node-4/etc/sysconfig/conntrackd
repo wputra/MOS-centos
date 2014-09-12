@@ -1,6 +1,0 @@
-# Override the default config file
-#CONNTRACKD_CONFIG=/etc/conntrackd/conntrackd.conf
-
-# Any arguments
-#CONNTRACKD_ARGS=
-

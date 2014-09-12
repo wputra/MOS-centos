@@ -1,6 +1,0 @@
-DEVICE=br-storage
-BOOTPROTO=none
-ONBOOT=no
-USERCTL=no
-
-

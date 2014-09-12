@@ -1,6 +1,0 @@
-DEVICE=br-ex
-BOOTPROTO=none
-ONBOOT=no
-USERCTL=no
-
-

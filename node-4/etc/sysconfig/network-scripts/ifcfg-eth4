@@ -1,6 +1,0 @@
-DEVICE=eth4
-BOOTPROTO=none
-ONBOOT=yes
-USERCTL=no
-
-

@@ -1,3 +1,0 @@
-NETWORKING=yes
-HOSTNAME=node-1.cbncloud.net
-GATEWAY=103.24.13.1

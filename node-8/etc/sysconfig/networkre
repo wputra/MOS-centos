@@ -1,3 +1,0 @@
-NETWORKING=yes
-HOSTNAME=node-8.cbncloud.net
-GATEWAY=10.16.0.2
